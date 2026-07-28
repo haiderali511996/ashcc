@@ -106,7 +106,7 @@ need a separate static hosting app** for the frontend.
 2. **Node.js version:** 18 or newer.
 3. **Application mode:** Production.
 4. **Application root:** `ashcc/backend` (the folder containing `server.js`).
-5. **Application URL:** your domain, e.g. `ashcc.com`.
+5. **Application URL:** `alsadiqhealthcare.online`.
 6. **Application startup file:** `server.js`.
 7. Click **Create**.
 
@@ -121,7 +121,7 @@ this — do **not** commit a `.env` file with real secrets to git):
 | `MONGODB_URI` | `mongodb+srv://<username>:<password>@cluster0.gyurptj.mongodb.net/ashcc?retryWrites=true&w=majority` |
 | `JWT_SECRET` | a long random string (generate with `openssl rand -hex 32`) |
 | `JWT_EXPIRES_IN` | `7d` |
-| `CLIENT_URL` | `https://ashcc.com` |
+| `CLIENT_URL` | `https://alsadiqhealthcare.online` |
 | `PORT` | leave as provided by cPanel, or `5000` |
 
 ### Step 5 — Install dependencies & seed the admin account
@@ -143,9 +143,9 @@ add those three as temporary environment variables before running the seed, or e
 
 Click **Restart** in the Node.js App screen. Your site should now be live at your domain, with:
 
-- Public website at `https://ashcc.com/`
-- Admin panel at `https://ashcc.com/admin/login`
-- API at `https://ashcc.com/api/...`
+- Public website at `https://alsadiqhealthcare.online/`
+- Admin panel at `https://alsadiqhealthcare.online/admin/login`
+- API at `https://alsadiqhealthcare.online/api/...`
 
 ### Step 7 — Uploaded images & file permissions
 
