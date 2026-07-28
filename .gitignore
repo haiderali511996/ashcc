@@ -1,0 +1,18 @@
+node_modules/
+.env
+.env.local
+*.log
+npm-debug.log*
+
+# Frontend build output
+frontend/dist/
+
+# Uploaded content (keep folders, ignore uploaded files)
+backend/uploads/blogs/*
+backend/uploads/team/*
+backend/uploads/misc/*
+!backend/uploads/blogs/.gitkeep
+!backend/uploads/team/.gitkeep
+!backend/uploads/misc/.gitkeep
+
+.DS_Store
