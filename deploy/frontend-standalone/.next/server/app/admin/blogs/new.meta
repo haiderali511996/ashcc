@@ -1,0 +1,18 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/(protected)/layout,_N_T_/admin/(protected)/blogs/layout,_N_T_/admin/(protected)/blogs/new/layout,_N_T_/admin/(protected)/blogs/new/page,_N_T_/admin/blogs/new"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/admin/!KHByb3RlY3RlZCk/blogs/new/__PAGE__",
+    "/admin/!KHByb3RlY3RlZCk/blogs/new",
+    "/admin/!KHByb3RlY3RlZCk/blogs",
+    "/admin/!KHByb3RlY3RlZCk",
+    "/admin",
+    "/_index",
+    "/_head"
+  ]
+}

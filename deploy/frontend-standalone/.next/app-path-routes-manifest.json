@@ -1,0 +1,20 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/admin/(protected)/appointments/page": "/admin/appointments",
+  "/admin/(protected)/blogs/[id]/edit/page": "/admin/blogs/[id]/edit",
+  "/admin/(protected)/blogs/new/page": "/admin/blogs/new",
+  "/admin/(protected)/blogs/page": "/admin/blogs",
+  "/admin/(protected)/messages/page": "/admin/messages",
+  "/admin/(protected)/page": "/admin",
+  "/admin/(protected)/settings/page": "/admin/settings",
+  "/admin/(protected)/team/page": "/admin/team",
+  "/admin/login/page": "/admin/login",
+  "/appointment/page": "/appointment",
+  "/blog/[slug]/page": "/blog/[slug]",
+  "/blog/page": "/blog",
+  "/contact/page": "/contact",
+  "/page": "/",
+  "/team/page": "/team"
+}
