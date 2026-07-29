@@ -1,5 +1,7 @@
+import { Suspense } from 'react';
 import PageHero from '@/components/PageHero';
 import AppointmentForm from '@/components/AppointmentForm';
+import Spinner from '@/components/Spinner';
 
 export const metadata = {
   title: 'Book Appointment',
@@ -18,7 +20,9 @@ export default function Appointment() {
 
       <section className="section">
         <div className="container-app max-w-3xl">
-          <AppointmentForm />
+          <Suspense fallback={<div className="flex justify-center py-24"><Spinner /></div>}>
+            <AppointmentForm />
+          </Suspense>
         </div>
       </section>
     </div>

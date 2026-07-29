@@ -85,7 +85,10 @@ export default async function TeamMemberDetail({ params }) {
               {member.bio && (
                 <p className="mt-6 whitespace-pre-line leading-relaxed text-ink-600">{member.bio}</p>
               )}
-              <Link href="/appointment" className="btn-primary mt-8">
+              <Link
+                href={`/appointment?doctor=${encodeURIComponent(member.name)}&department=${encodeURIComponent(member.department || '')}`}
+                className="btn-primary mt-8"
+              >
                 Book an Appointment
               </Link>
             </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import toast from 'react-hot-toast';
 import api from '@/lib/api';
 
@@ -27,7 +28,15 @@ const departments = [
 ];
 
 export default function AppointmentForm() {
-  const [form, setForm] = useState(emptyForm);
+  const searchParams = useSearchParams();
+  const prefilledDoctor = searchParams.get('doctor') || '';
+  const prefilledDepartment = searchParams.get('department') || '';
+
+  const [form, setForm] = useState({
+    ...emptyForm,
+    doctor: prefilledDoctor,
+    department: departments.includes(prefilledDepartment) ? prefilledDepartment : emptyForm.department,
+  });
   const [submitting, setSubmitting] = useState(false);
 
   function update(field) {
@@ -78,6 +87,9 @@ export default function AppointmentForm() {
         <div>
           <label className="label">Preferred Doctor (optional)</label>
           <input className="input" value={form.doctor} onChange={update('doctor')} />
+          {prefilledDoctor && (
+            <p className="mt-1 text-xs text-brand-500">Pre-filled from the doctor you selected — feel free to change it.</p>
+          )}
         </div>
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
