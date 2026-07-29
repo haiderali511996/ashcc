@@ -17,7 +17,7 @@ const fields = [
   { key: 'phone', label: 'Phone Number' },
   { key: 'whatsapp', label: 'WhatsApp Number (with country code, no +)' },
   { key: 'email', label: 'Email' },
-  { key: 'openingHours', label: 'Opening Hours' },
+  { key: 'openingHours', label: 'Opening Hours (one day per line)', textarea: true },
   { key: 'mapEmbedUrl', label: 'Google Maps Embed URL' },
   { key: 'facebook', label: 'Facebook URL' },
   { key: 'instagram', label: 'Instagram URL' },

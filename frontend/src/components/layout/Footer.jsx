@@ -80,7 +80,7 @@ export default function Footer() {
             {settings.openingHours && (
               <li className="flex gap-3">
                 <HiClock className="h-5 w-5 shrink-0 text-brand-400" />
-                <span>{settings.openingHours}</span>
+                <span className="whitespace-pre-line">{settings.openingHours}</span>
               </li>
             )}
           </ul>

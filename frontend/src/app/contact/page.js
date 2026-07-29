@@ -68,7 +68,7 @@ export default async function Contact() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-wide text-ink-400">Opening Hours</p>
-                      <p className="mt-0.5 text-sm text-ink-700">{settings.openingHours}</p>
+                      <p className="mt-0.5 whitespace-pre-line text-sm text-ink-700">{settings.openingHours}</p>
                     </div>
                   </li>
                 )}
