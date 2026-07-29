@@ -1,20 +1,26 @@
-import { Navigate } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext';
-import Spinner from '../Spinner';
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
+import Spinner from '@/components/Spinner';
 
 export default function ProtectedRoute({ children }) {
   const { admin, loading } = useAuth();
+  const router = useRouter();
 
-  if (loading) {
+  useEffect(() => {
+    if (!loading && !admin) {
+      router.replace('/admin/login');
+    }
+  }, [loading, admin, router]);
+
+  if (loading || !admin) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-ink-50">
         <Spinner />
       </div>
     );
-  }
-
-  if (!admin) {
-    return <Navigate to="/admin/login" replace />;
   }
 
   return children;

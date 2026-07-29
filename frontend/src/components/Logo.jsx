@@ -9,6 +9,7 @@ export default function Logo({ variant = 'dark', className = '' }) {
           variant === 'light' ? 'bg-white p-1' : ''
         }`}
       >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/logo-icon.png" alt="Al Sadiq Health Care Centre logo" className="h-full w-full object-contain" />
       </span>
       <div className="leading-tight">

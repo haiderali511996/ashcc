@@ -51,17 +51,9 @@ app.use('/api/dashboard', dashboardRoutes);
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok', time: new Date().toISOString() }));
 
-// Serve the built React frontend in production
-const clientBuildPath = path.join(__dirname, '..', 'frontend', 'dist');
-app.use(express.static(clientBuildPath));
-app.get('*', (req, res, next) => {
-  if (req.originalUrl.startsWith('/api') || req.originalUrl.startsWith('/uploads')) {
-    return next();
-  }
-  res.sendFile(path.join(clientBuildPath, 'index.html'), (err) => {
-    if (err) next();
-  });
-});
+// This is a standalone API server — the Next.js frontend runs as a separate
+// Node.js app and calls these routes over HTTP (see NEXT_PUBLIC_API_URL).
+app.get('/', (req, res) => res.json({ status: 'ok', service: 'ashcc-api' }));
 
 app.use(notFound);
 app.use(errorHandler);

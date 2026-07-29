@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
 import { HiLocationMarker, HiPhone, HiMail, HiClock } from 'react-icons/hi';
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
-import Logo from '../Logo';
-import { useSettings } from '../../context/SettingsContext';
+import Logo from '@/components/Logo';
+import { useSettings } from '@/context/SettingsContext';
 
 export default function Footer() {
   const { settings } = useSettings();
@@ -46,11 +48,11 @@ export default function Footer() {
             Quick Links
           </h4>
           <ul className="mt-4 space-y-2 text-sm text-white/70">
-            <li><Link to="/about" className="hover:text-white">About Us</Link></li>
-            <li><Link to="/team" className="hover:text-white">Our Team</Link></li>
-            <li><Link to="/blog" className="hover:text-white">Blog</Link></li>
-            <li><Link to="/appointment" className="hover:text-white">Book Appointment</Link></li>
-            <li><Link to="/contact" className="hover:text-white">Contact Us</Link></li>
+            <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+            <li><Link href="/team" className="hover:text-white">Our Team</Link></li>
+            <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+            <li><Link href="/appointment" className="hover:text-white">Book Appointment</Link></li>
+            <li><Link href="/contact" className="hover:text-white">Contact Us</Link></li>
           </ul>
         </div>
 

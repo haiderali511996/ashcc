@@ -71,7 +71,7 @@ const blogs = [
     tags: ['heart health', 'cardiology', 'prevention', 'lifestyle'],
     excerpt:
       'Heart disease remains one of the leading health concerns worldwide, but small daily habits can make a big difference. Here are 10 practical steps to protect your heart.',
-    metaTitle: '10 Simple Habits for a Healthier Heart | ASHCC Lahore',
+    metaTitle: '10 Simple Habits for a Healthier Heart',
     metaDescription:
       'Practical, doctor-backed habits to lower your risk of heart disease, from diet to stress management. Advice from Al Sadiq Health Care Centre, Lahore.',
     content: `
@@ -139,7 +139,7 @@ ${img('heart-2', 'Healthy heart-friendly meal with vegetables and lean protein',
     tags: ['diabetes', 'prevention', 'chronic disease', 'nutrition'],
     excerpt:
       'Diabetes affects millions of people, often silently. Learn the warning signs, prevention strategies, and how our team helps patients manage this condition long-term.',
-    metaTitle: 'Understanding Diabetes: Symptoms, Prevention & Management | ASHCC',
+    metaTitle: 'Understanding Diabetes: Symptoms, Prevention & Management',
     metaDescription:
       'Learn the warning signs of diabetes, how to lower your risk, and how Al Sadiq Health Care Centre helps patients in Lahore manage diabetes long-term.',
     content: `
@@ -217,7 +217,7 @@ ${img('diabetes-2', 'Healthy low-sugar meal for diabetes prevention', 'A balance
     tags: ['checkups', 'preventive care', 'screening', 'wellness'],
     excerpt:
       "Many people only visit a doctor when something feels wrong. Here's why routine checkups &mdash; even when you feel perfectly healthy &mdash; are one of the smartest investments you can make in your health.",
-    metaTitle: 'Why Regular Health Checkups Matter | ASHCC Lahore',
+    metaTitle: 'Why Regular Health Checkups Matter',
     metaDescription:
       'Discover why routine checkups catch problems early, save money long-term, and give peace of mind. Guidance from Al Sadiq Health Care Centre, Lahore.',
     content: `
@@ -289,7 +289,7 @@ ${img('checkup-2', 'Nurse recording patient vitals during a health checkup', 'Ou
     tags: ['vaccination', 'pediatrics', 'child health', 'immunization'],
     excerpt:
       'Vaccinations are one of the most effective ways to protect your child from serious diseases. This guide walks parents through the recommended immunization schedule and common questions.',
-    metaTitle: "Child Vaccination Schedule: A Parent's Guide | ASHCC Lahore",
+    metaTitle: "Child Vaccination Schedule: A Parent's Guide",
     metaDescription:
       "A complete guide to the childhood immunization schedule, common parent questions, and how ASHCC's pediatric team keeps your child protected.",
     content: `
@@ -379,7 +379,7 @@ ${img('vaccine-2', 'Vaccination record card used to track child immunizations', 
     tags: ['stress management', 'mental health', 'wellness', 'lifestyle'],
     excerpt:
       "Stress affects far more than your mood &mdash; it impacts your heart, immune system, sleep, and overall wellbeing. Here's how to recognize chronic stress and manage it effectively.",
-    metaTitle: 'Managing Stress for Better Mental & Physical Health | ASHCC',
+    metaTitle: 'Managing Stress for Better Mental & Physical Health',
     metaDescription:
       'Chronic stress affects your heart, sleep, and immune system. Learn practical stress-management strategies from Al Sadiq Health Care Centre, Lahore.',
     content: `

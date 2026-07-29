@@ -1,9 +1,11 @@
-import { createContext, useContext, useEffect, useState } from 'react';
-import api from '../api/client';
+'use client';
+
+import { createContext, useContext, useState } from 'react';
+import api from '@/lib/api';
 
 const SettingsContext = createContext(null);
 
-const defaultSettings = {
+export const defaultSettings = {
   siteName: 'Al Sadiq Health Care Centre',
   tagline: 'Compassionate Care, Trusted Excellence',
   aboutText: '',
@@ -21,15 +23,8 @@ const defaultSettings = {
   youtube: '',
 };
 
-export function SettingsProvider({ children }) {
-  const [settings, setSettings] = useState(defaultSettings);
-
-  useEffect(() => {
-    api
-      .get('/settings')
-      .then((res) => setSettings({ ...defaultSettings, ...res.data }))
-      .catch(() => {});
-  }, []);
+export function SettingsProvider({ initialSettings, children }) {
+  const [settings, setSettings] = useState({ ...defaultSettings, ...initialSettings });
 
   function refreshSettings() {
     return api.get('/settings').then((res) => setSettings({ ...defaultSettings, ...res.data }));

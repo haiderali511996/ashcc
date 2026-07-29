@@ -1,13 +1,15 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { format } from 'date-fns';
+import { mediaUrl } from '@/lib/config';
 
 export default function BlogCard({ blog }) {
   return (
-    <Link to={`/blog/${blog.slug}`} className="card group flex flex-col overflow-hidden">
+    <Link href={`/blog/${blog.slug}`} className="card group flex flex-col overflow-hidden">
       <div className="aspect-video w-full overflow-hidden bg-ink-100">
         {blog.coverImage ? (
+          // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={blog.coverImage}
+            src={mediaUrl(blog.coverImage)}
             alt={blog.title}
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />

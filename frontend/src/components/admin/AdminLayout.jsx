@@ -1,4 +1,7 @@
-import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import {
   HiOutlineViewGrid,
   HiOutlineDocumentText,
@@ -9,26 +12,29 @@ import {
   HiOutlineLogout,
   HiExternalLink,
 } from 'react-icons/hi';
-import Logo from '../Logo';
-import { useAuth } from '../../context/AuthContext';
+import Logo from '@/components/Logo';
+import { useAuth } from '@/context/AuthContext';
 
 const links = [
-  { to: '/admin', label: 'Dashboard', icon: HiOutlineViewGrid, end: true },
-  { to: '/admin/blogs', label: 'Blog Posts', icon: HiOutlineDocumentText },
-  { to: '/admin/team', label: 'Team', icon: HiOutlineUserGroup },
-  { to: '/admin/messages', label: 'Messages', icon: HiOutlineMail },
-  { to: '/admin/appointments', label: 'Appointments', icon: HiOutlineCalendar },
-  { to: '/admin/settings', label: 'Site Settings', icon: HiOutlineCog },
+  { href: '/admin', label: 'Dashboard', icon: HiOutlineViewGrid },
+  { href: '/admin/blogs', label: 'Blog Posts', icon: HiOutlineDocumentText },
+  { href: '/admin/team', label: 'Team', icon: HiOutlineUserGroup },
+  { href: '/admin/messages', label: 'Messages', icon: HiOutlineMail },
+  { href: '/admin/appointments', label: 'Appointments', icon: HiOutlineCalendar },
+  { href: '/admin/settings', label: 'Site Settings', icon: HiOutlineCog },
 ];
 
-export default function AdminLayout() {
+export default function AdminLayout({ children }) {
   const { admin, logout } = useAuth();
-  const navigate = useNavigate();
+  const router = useRouter();
+  const pathname = usePathname();
 
   function handleLogout() {
     logout();
-    navigate('/admin/login');
+    router.push('/admin/login');
   }
+
+  const isActive = (href) => (href === '/admin' ? pathname === '/admin' : pathname.startsWith(href));
 
   return (
     <div className="flex min-h-screen bg-ink-50">
@@ -37,25 +43,22 @@ export default function AdminLayout() {
           <Logo />
         </div>
         <nav className="flex-1 space-y-1 p-4">
-          {links.map(({ to, label, icon: Icon, end }) => (
-            <NavLink
-              key={to}
-              to={to}
-              end={end}
-              className={({ isActive }) =>
-                `flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors ${
-                  isActive ? 'bg-brand-500 text-white' : 'text-ink-600 hover:bg-ink-100'
-                }`
-              }
+          {links.map(({ href, label, icon: Icon }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors ${
+                isActive(href) ? 'bg-brand-500 text-white' : 'text-ink-600 hover:bg-ink-100'
+              }`}
             >
               <Icon className="h-5 w-5" />
               {label}
-            </NavLink>
+            </Link>
           ))}
         </nav>
         <div className="border-t border-ink-100 p-4">
           <a
-            href="/"
+            href={process.env.NEXT_PUBLIC_SITE_URL || '/'}
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-semibold text-ink-600 hover:bg-ink-100"
@@ -81,9 +84,7 @@ export default function AdminLayout() {
             <p className="text-xs text-ink-400 capitalize">{admin?.role}</p>
           </div>
         </header>
-        <main className="p-6">
-          <Outlet />
-        </main>
+        <main className="p-6">{children}</main>
       </div>
     </div>
   );

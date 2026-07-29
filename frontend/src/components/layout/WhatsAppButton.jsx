@@ -1,5 +1,7 @@
+'use client';
+
 import { FaWhatsapp } from 'react-icons/fa';
-import { useSettings } from '../../context/SettingsContext';
+import { useSettings } from '@/context/SettingsContext';
 
 export default function WhatsAppButton() {
   const { settings } = useSettings();

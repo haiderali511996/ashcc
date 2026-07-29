@@ -1,16 +1,18 @@
+'use client';
+
 import { createContext, useContext, useEffect, useState } from 'react';
-import api from '../api/client';
+import api from '@/lib/api';
 
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-  const [admin, setAdmin] = useState(() => {
-    const saved = localStorage.getItem('ashcc_admin');
-    return saved ? JSON.parse(saved) : null;
-  });
+  const [admin, setAdmin] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const saved = localStorage.getItem('ashcc_admin');
+    if (saved) setAdmin(JSON.parse(saved));
+
     const token = localStorage.getItem('ashcc_token');
     if (!token) {
       setLoading(false);

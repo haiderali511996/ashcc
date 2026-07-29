@@ -1,4 +1,5 @@
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { mediaUrl } from '@/lib/config';
 
 export default function TeamCard({ member }) {
   const socials = [
@@ -11,7 +12,8 @@ export default function TeamCard({ member }) {
     <div className="card overflow-hidden text-center">
       <div className="aspect-square w-full overflow-hidden bg-ink-100">
         {member.photo ? (
-          <img src={member.photo} alt={member.name} className="h-full w-full object-cover" />
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={mediaUrl(member.photo)} alt={member.name} className="h-full w-full object-cover" />
         ) : (
           <div className="flex h-full w-full items-center justify-center text-4xl font-bold text-ink-300">
             {member.name?.charAt(0)}
