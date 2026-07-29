@@ -81,17 +81,11 @@ export default function Home() {
           </div>
           <div className="relative mx-auto flex h-64 w-64 items-center justify-center md:h-80 md:w-80">
             <div className="absolute inset-0 rounded-full bg-brand-500/20 blur-3xl" />
-            <svg viewBox="0 0 100 100" className="relative h-full w-full drop-shadow-2xl">
-              <path
-                d="M64 10 C42 10 24 28 24 52 C24 76 42 94 64 94 C50 88 40 71 40 52 C40 33 50 16 64 10 Z"
-                fill="#C8102E"
-              />
-              <path
-                d="M16 68 C28 78 44 80 50 70 C56 80 72 78 84 68 C76 74 62 72 58 66 L54 76 L50 66 L46 76 L42 66 C38 72 24 74 16 68 Z"
-                fill="#ffffff"
-              />
-              <circle cx="50" cy="72" r="4.5" fill="#C8102E" />
-            </svg>
+            <img
+              src="/logo-icon.png"
+              alt="Al Sadiq Health Care Centre"
+              className="relative h-full w-full object-contain drop-shadow-2xl"
+            />
           </div>
         </div>
       </section>

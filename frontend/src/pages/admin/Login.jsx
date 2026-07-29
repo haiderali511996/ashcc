@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
-import Logo from '../../components/Logo';
 import { useAuth } from '../../context/AuthContext';
 
 export default function Login() {
@@ -30,7 +29,7 @@ export default function Login() {
     <div className="flex min-h-screen items-center justify-center bg-ink-900 px-4">
       <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl">
         <div className="flex justify-center">
-          <Logo />
+          <img src="/logo-full.jpeg" alt="Al Sadiq Health Care Centre" className="h-32 w-auto" />
         </div>
         <h1 className="mt-6 text-center text-xl font-bold text-ink-900">Admin Login</h1>
         <p className="mt-1 text-center text-sm text-ink-500">Sign in to manage your website</p>
