@@ -16,5 +16,6 @@
   "/blog/page": "/blog",
   "/contact/page": "/contact",
   "/page": "/",
+  "/team/[id]/page": "/team/[id]",
   "/team/page": "/team"
 }

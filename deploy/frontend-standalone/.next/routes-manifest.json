@@ -37,6 +37,14 @@
         "nxtPslug": "nxtPslug"
       },
       "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/team/[id]",
+      "regex": "^/team/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/team/(?<nxtPid>[^/]+?)(?:/)?$"
     }
   ],
   "staticRoutes": [

@@ -1,6 +1,5 @@
 var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/team/page.js")
-R.c("server/chunks/ssr/[root-of-the-server]__1gyi005._.js")
-R.c("server/chunks/ssr/src_components_TeamCard_jsx_08woquv._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__1dj9mos._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0cp2nhj.js")
 R.c("server/chunks/ssr/[root-of-the-server]__1a12us4._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__1jwshgz._.js")

@@ -5,6 +5,12 @@ async function listPublic(req, res) {
   res.json(members);
 }
 
+async function getOnePublic(req, res) {
+  const member = await TeamMember.findOne({ _id: req.params.id, isActive: true });
+  if (!member) return res.status(404).json({ message: 'Team member not found' });
+  res.json(member);
+}
+
 async function listAdmin(req, res) {
   const members = await TeamMember.find().sort({ order: 1, createdAt: 1 });
   res.json(members);
@@ -34,4 +40,4 @@ async function remove(req, res) {
   res.json({ message: 'Team member deleted' });
 }
 
-module.exports = { listPublic, listAdmin, create, update, remove };
+module.exports = { listPublic, getOnePublic, listAdmin, create, update, remove };

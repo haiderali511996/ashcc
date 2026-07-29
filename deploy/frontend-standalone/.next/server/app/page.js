@@ -1,7 +1,6 @@
 var R=require("../chunks/ssr/[turbopack]_runtime.js")("server/app/page.js")
-R.c("server/chunks/ssr/[root-of-the-server]__1_b0b69._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0jgmf67._.js")
 R.c("server/chunks/ssr/node_modules_date-fns_format_03du6ff.js")
-R.c("server/chunks/ssr/src_components_TeamCard_jsx_08woquv._.js")
 R.c("server/chunks/ssr/node_modules_react-icons_hi_index_mjs_1pin0-r._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_1o846zx.js")
 R.c("server/chunks/ssr/[root-of-the-server]__1a12us4._.js")
